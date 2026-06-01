@@ -40,6 +40,7 @@ hardware/
 ├── nes-dev-cart.kicad_sch      KiCad schematic
 ├── nes-dev-cart.kicad_pro      KiCad project
 ├── footprints/                 Custom footprint libraries
+├── shell/                     Cart shell STL files (front/back)
 └── production/
     ├── nes-dev-cart-gerbers.zip    Fabrication-ready gerbers
     ├── nes-dev-cart-bom.csv        BOM with LCSC part numbers
