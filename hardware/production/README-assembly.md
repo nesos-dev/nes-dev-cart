@@ -1,4 +1,4 @@
-# NES-DEV-CART v4 — JLCPCB Production & Assembly
+# NES-DEV-CART v4.1 — JLCPCB Production & Assembly
 
 ## Board Specifications
 
@@ -25,8 +25,9 @@
 
 ### Assembly Type: Both Sides
 
-- **Top side**: 33 components (passives, ICs, USB-C, crystal, LED, switch)
+- **Top side**: 36 components (passives, ICs, USB-C, crystal, LED, switch, PSRAM)
 - **Bottom side**: 2 components (DF40 B2B connectors)
+- **Total**: 38 SMT assembled (+ 1 card edge connector = 39 SMT pads on BOM)
 
 ### Files to Upload
 
@@ -35,11 +36,11 @@
 | `nes-dev-cart-bom.csv` | Bill of Materials with LCSC part numbers |
 | `nes-dev-cart-cpl-jlcpcb.csv` | Component Placement List (pick & place) |
 
-### Component Summary (36 SMT parts)
+### Component Summary (39 SMT parts)
 
 | Qty | Designator | Part | LCSC | Notes |
 |-----|-----------|------|------|-------|
-| 14 | C1-C8,C11-C14,C16,C18 | 100nF 0805 X7R | C49678 | Basic part |
+| 15 | C1-C8,C11-C14,C16,C18,C19 | 100nF 0805 X7R | C49678 | Basic part |
 | 2 | C9,C10 | 27pF 0805 NP0 | C107113 | Crystal load caps |
 | 2 | C15,C17 | 4.7uF 0805 X5R | C1779 | Basic part |
 | 1 | R1 | 2.2k 0805 | C17520 | Basic part |
@@ -50,18 +51,20 @@
 | 1 | U5 | FT2232HL LQFP-64 | C27882 | USB-JTAG/UART |
 | 1 | Y1 | 12MHz 3225 crystal | C390764 | FT2232HL clock |
 | 1 | FB1 | Ferrite 600R 0805 | C21286 | USB VBUS filter |
-| 1 | D1 | Green LED 0805 | C2297 | FPGA DONE indicator |
+| 1 | D1 | Green LED 0805 | C2297 | Power indicator |
 | 1 | D2 | 1N5817W SOD-123 | C571353 | Power OR diode |
 | 1 | J4 | USB-C HRO TYPE-C-31-M-12 | C165948 | USB connector |
 | 2 | J2,J3 | DF40C-60DS-0.4V(51) | C597938 | B2B receptacles (BOTTOM) |
 | 1 | SW1 | PTS645SM43SMTR92LFS | C221880 | Reset button |
+| 1 | U6 | APS6404L-3SQR-SN SOIC-8 | C5333729 | 8MB SPI PSRAM |
+| 1 | C20 | 10uF 0805 X5R | C15850 | PSRAM bulk decoupling |
 
 ### NOT Assembled by JLCPCB (hand-solder)
 
 | Designator | Part | Notes |
 |-----------|------|-------|
 | J5 | 2x5 pin header 2.54mm | JTAG — solder after SMT |
-| J6 | 2x5 pin header 2.54mm | Expansion GPIO — solder after SMT |
+| J6 | 2x5 pin header 2.54mm | Expansion power header — solder after SMT |
 | J1 | — | Card edge connector (no component, part of PCB) |
 
 ### Rotation Check

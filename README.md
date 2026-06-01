@@ -1,8 +1,8 @@
 # NES-DEV-CART
 
-Open-source FPGA development cartridge for the Nintendo Entertainment System.
+Open-source FPGA development cartridge for the Nintendo Entertainment System. **v4.1** — now with 8MB onboard PSRAM.
 
-Plugs into a real NES. Programs over USB-C. Debug via UART. Full NES bus access.
+Plugs into a real NES. Programs over USB-C. Debug via UART. Full NES bus access. 39 SMT components, professionally assembled.
 
 ## What Is It
 
@@ -45,9 +45,13 @@ hardware/
     ├── nes-dev-cart-bom.csv        BOM with LCSC part numbers
     ├── nes-dev-cart-cpl-jlcpcb.csv Component placement list
     ├── README-assembly.md          Assembly instructions
+    ├── nes-dev-cart-render-*.png   Board renders (top/bottom)
     └── gerbers/                    Individual gerber files
 
-website/                        Product website
+website/                        Product website (nesos.dev)
+├── index.html
+├── style.css
+└── success.html
 ```
 
 ## Ordering PCBs
